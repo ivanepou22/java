@@ -48,17 +48,36 @@ public class MainClassOop {
 //        System.out.println("width= " + wall.getWidth());
 //        System.out.println("height= " + wall.getHeight());
 //        System.out.println("area= " + wall.getArea());
+//
+//        ComplexNumber one = new ComplexNumber(1.0, 1.0);
+//        ComplexNumber number = new ComplexNumber(2.5, -1.5);
+//        one.add(1,1);
+//        System.out.println("one.real= " + one.getReal());
+//        System.out.println("one.imaginary= " + one.getImaginary());
+//        one.subtract(number);
+//        System.out.println("one.real= " + one.getReal());
+//        System.out.println("one.imaginary= " + one.getImaginary());
+//        number.subtract(one);
+//        System.out.println("number.real= " + number.getReal());
+//        System.out.println("number.imaginary= " + number.getImaginary());
 
-        ComplexNumber one = new ComplexNumber(1.0, 1.0);
-        ComplexNumber number = new ComplexNumber(2.5, -1.5);
-        one.add(1,1);
-        System.out.println("one.real= " + one.getReal());
-        System.out.println("one.imaginary= " + one.getImaginary());
-        one.subtract(number);
-        System.out.println("one.real= " + one.getReal());
-        System.out.println("one.imaginary= " + one.getImaginary());
-        number.subtract(one);
-        System.out.println("number.real= " + number.getReal());
-        System.out.println("number.imaginary= " + number.getImaginary());
+        for (int i = 1; i <= 5; i++){
+            String name;
+            switch(i) {
+                case 1: name ="Ivan"; break;
+                case 2: name = "Epou"; break;
+                case 3: name = "Leivan"; break;
+                case 4: name = "Dyron"; break;
+                case 5: name = "Dylan"; break;
+                default:name ="Anonymus";
+            }
+            Pojo s = new Pojo(
+                    "ST-000"+ i,
+                    name,
+                    "30-12-1992",
+                    "Java MasterClass"
+            );
+            System.out.println(s);
+        }
     }
 }
