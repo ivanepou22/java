@@ -14,15 +14,15 @@ public class Composition {
 
         SmartKitchen smartKitchen = new SmartKitchen();
 
-//        smartKitchen.getBrewMaster().setHasWorkToDo(true);
-//        smartKitchen.getDishWasher().setHasWorkToDo(true);
-//        smartKitchen.getIceBox().setHasWorkToDo(true);
-//
-//        smartKitchen.getBrewMaster().brewCoffee();
-//        smartKitchen.getDishWasher().doDishes();
-//        smartKitchen.getIceBox().orderFood();
+        smartKitchen.getBrewMaster().setHasWorkToDo(true);
+        smartKitchen.getDishWasher().setHasWorkToDo(true);
+        smartKitchen.getIceBox().setHasWorkToDo(true);
 
-        smartKitchen.setKitchenState(true, false, false);
-        smartKitchen.doKitchenWork();
+        smartKitchen.getBrewMaster().brewCoffee();
+        smartKitchen.getDishWasher().doDishes();
+        smartKitchen.getIceBox().orderFood();
+//
+//        smartKitchen.setKitchenState(true, false, false);
+//        smartKitchen.doKitchenWork();
     }
 }

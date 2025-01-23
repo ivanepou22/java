@@ -14,30 +14,41 @@ public class Item {
 
     public String getName() {
         if (type.equals("SIDE") || type.equals("DRINK")) {
-            return size + " " + name;
+            return size+ " "+ name;
         }
         return name;
     }
 
-    public double getBasePrice() {
+    public double getPrice() {
         return price;
     }
 
     public double getAdjustedPrice() {
-        switch (size) {
-            case "SMALL":
-                return getBasePrice() - 0.5;
-            case "LARGE":
-                return getBasePrice() + 1;
-            default: return getBasePrice();
-        }
+        double adjustedPrice = 0;
+
+        switch(size) {
+            case "SMALL": {
+                adjustedPrice = getPrice() - 0.5;
+                break;
+            }
+            case "LARGE": {
+                adjustedPrice = getPrice() + 1;
+                break;
+            }
+            default: adjustedPrice = getPrice();
+        };
+        return  adjustedPrice;
     }
 
     public void setSize(String size) {
         this.size = size;
     }
 
-    public static void printItem(String name, double price){
+    public static void printItem(String name, double price) {
         System.out.printf("%20s:%6.2f%n", name, price);
+    }
+
+    public void printItem() {
+        printItem(getName(), getAdjustedPrice());
     }
 }
